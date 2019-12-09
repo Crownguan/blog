@@ -87,9 +87,9 @@ meta是用来在HTML文档中模拟HTTP协议的响应头报文。在HTML页面�
 ### 缓存方案
 静态资源CDN部署 按时按需更新缓存
 
-| 缓存对象 ｜ Cache Control配置 |
-| ------   ｜  -------- |
-| /page HTML | no-cache |
-| /dist/css xx.css | max-age=31536000 |
-| /dist/js xx.js | private,max-age=31536000 |
-| /dist/img xx.png | max-age=86400 |
+|  缓存对象 ｜  Cache Control配置  |
+|  ------   ｜  --------  |
+|  /page HTML |  no-cache  |
+|  /dist/css xx.css |  max-age=31536000  |
+|  /dist/js xx.js |  private,max-age=31536000  |
+|  /dist/img xx.png |  max-age=86400  |
