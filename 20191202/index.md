@@ -74,7 +74,7 @@ expires/cache-control虽然是强缓存 但用户主动触发的刷新行为 还
 2、设置了长缓存、但Entity Tags没有移除时触发
 
 ### 流程图
-![流程图](../img/liuchengtu.png)
+![流程图]({{ '../img/liuchengtu.png' | prepend: site.baseurl }})
 
 ### Meta标签
 meta是用来在HTML文档中模拟HTTP协议的响应头报文。在HTML页面加上meta标签来给请求报头加上请求字段
@@ -86,6 +86,7 @@ meta是用来在HTML文档中模拟HTTP协议的响应头报文。在HTML页面�
 
 ### 缓存方案
 静态资源CDN部署 按时按需更新缓存
+
 缓存对象 ｜ Cache Control配置
 ------   ｜  --------
 /page HTML | no-cache
