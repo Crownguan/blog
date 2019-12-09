@@ -23,25 +23,27 @@ Expires: 返回的时间是服务端的时间 这样就存在一个问题 如果
 Last-Modified: 资源最后一次修改时间
 
 ##### 注：Cache Control优先级高于Pragma、Expires(HTTP/1.1) Cache-Control > Expires > Pragma
-| 请求Cache Control      |    释意 |
-| max-age| 可以接收缓存最长时间|
-| max-stale| 可以接收过期的资源 但是过期时间必须小于max-stale值|
-| min-fresh| 可以接收一个更新过的资源 fresh生命期大于当前Age跟min-fresh值之和|
-| no-cache| 在源服务器返回成功的验证之前不能使用缓存响应|
-| no-store| 直接禁止浏览器和所有中继缓存存储返回的任何版本的响应|
-| no-transform| 获取没有被转换过（比如压缩）的资源|
-| only-if-cached| 希望获取缓存内容而不发起请求|
+| 请求Cache Control      |    释意
+| -------- | --------- |
+| max-age | 可以接收缓存最长时间 |
+| max-stale | 可以接收过期的资源 但是过期时间必须小于max-stale值 |
+| min-fresh | 可以接收一个更新过的资源 fresh生命期大于当前Age跟min-fresh值之和 |
+| no-cache | 在源服务器返回成功的验证之前不能使用缓存响应 |
+| no-store | 直接禁止浏览器和所有中继缓存存储返回的任何版本的响应 |
+| no-transform | 获取没有被转换过（比如压缩）的资源 |
+| only-if-cached | 希望获取缓存内容而不发起请求 |
 
 | 响应Cache Control      |    释意 |
-| no-cache| 缓存必须重新校验|
-| no-store| 不存储缓存|
-| no-transform| 缓存内容时不能对改变任何数据|
-| public| 响应可被任何缓存区缓存|
-| private| 只在本地缓存，不允许任何中继缓存对其进行缓存（例如，浏览器可以缓存，但是CDN不能缓存）|
-| mush-revalidate| 如果缓存的内容失效，请求必须发送到服务器以进行重新验证（请求失败返回504，而非中CDN|
-| max-age| 只接受 Age 值小于 max-age 值，并且没有过期的资源|
-| proxy-revalidate| 与must-revalidate类似，仅能用于共享缓存（如：CDN）|
-| s-maxage| 仅能用于共享缓存，一般用在cache服务器上(如：CDN)|
+| -------- | --------- |
+| no-cache | 缓存必须重新校验 |
+| no-store | 不存储缓存 |
+| no-transform | 缓存内容时不能对改变任何数据 |
+| public | 响应可被任何缓存区缓存 |
+| private | 只在本地缓存，不允许任何中继缓存对其进行缓存（例如，浏览器可以缓存，但是CDN不能缓存）|
+| mush-revalidate | 如果缓存的内容失效，请求必须发送到服务器以进行重新验证请求失败返回504，而非中CDN |
+| max-age | 只接受 Age 值小于 max-age 值，并且没有过期的资源 |
+| proxy-revalidate | 与must-revalidate类似，仅能用于共享缓存（如：CDN）|
+| s-maxage | 仅能用于共享缓存，一般用在cache服务器上(如：CDN) |
 
 ### 缓存对比
 
@@ -72,7 +74,7 @@ expires/cache-control虽然是强缓存 但用户主动触发的刷新行为 还
 2、设置了长缓存、但Entity Tags没有移除时触发
 
 ### 流程图
-![avatar](/Users/wangguan140/Desktop/200/WechatIMG3.png)
+![avatar](../img/WeChat29292f7c9493087fb65fba0dbb00ad27.png)
 
 ### Meta标签
 meta是用来在HTML文档中模拟HTTP协议的响应头报文。在HTML页面加上meta标签来给请求报头加上请求字段
